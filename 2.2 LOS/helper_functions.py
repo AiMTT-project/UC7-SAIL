@@ -136,7 +136,7 @@ def save_gdf_as_mp4(gdf: gpd.GeoDataFrame):
         ax.set_ylim(ymin, ymax)
 
         # Add basemap after setting extent
-        ctx.add_basemap(ax, source=ctx.providers.OpenStreetMap.Mapnik)
+        ctx.add_basemap(ax, source=ctx.providers.CartoDB.Positron)
 
         ax.legend(handles=legend_patches, title="Level of Service", loc="upper right")
         ax.set_title(
