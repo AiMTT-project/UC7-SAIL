@@ -77,11 +77,11 @@ You can also pre-fetch all multi-modal datasets using `wget` in a Colab code cel
 # Crowdscan capacity dataset (from Chapter 2.3)
 !wget -q https://raw.githubusercontent.com/AiMTT-project/UC7-SAIL/main/2.3%20Visualisatie/visualisation_deepdive_data.geojson -O sample_data/visualisation_deepdive_data.geojson
 
-# TomTom traffic flow dataset
-!wget -q https://raw.githubusercontent.com/AiMTT-project/UC7-SAIL/main/3.2%20Alerting/tomtom_alerts_deepdive_data.geojson -O sample_data/tomtom_alerts_deepdive_data.geojson
+# TomTom traffic flow dataset (Git LFS media link)
+!wget -q https://media.githubusercontent.com/media/AiMTT-project/UC7-SAIL/main/3.2%20Alerting/tomtom_alerts_deepdive_data.geojson -O sample_data/tomtom_alerts_deepdive_data.geojson
 
-# Waterway vessel monitoring dataset
-!wget -q https://raw.githubusercontent.com/AiMTT-project/UC7-SAIL/main/3.2%20Alerting/vaarwegen_alerts_deepdive_data.geojson -O sample_data/vaarwegen_alerts_deepdive_data.geojson
+# Waterway vessel monitoring dataset (Git LFS media link)
+!wget -q https://media.githubusercontent.com/media/AiMTT-project/UC7-SAIL/main/3.2%20Alerting/vaarwegen_alerts_deepdive_data.geojson -O sample_data/vaarwegen_alerts_deepdive_data.geojson
 ```
 
 ---
