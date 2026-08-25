@@ -1,6 +1,15 @@
 # Chapter 2.2: Level of Service (LOS) Deep Dive
 
-This module provides the practical deep-dive notebook accompanying **Video 2.2: Level-of-Service concept**, presented by **Winnie Daamen (TU Delft)** as part of Chapter 2 (Preparation Phase).
+This module provides the practical deep-dive notebooks accompanying **Video 2.2: Level-of-Service concept**, presented by **Winnie Daamen (TU Delft)** as part of Chapter 2 (Preparation Phase).
+
+---
+
+## Interactive Notebooks
+
+Open the notebooks directly in Google Colab:
+
+- **Starter Exercises**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/2.2%20LOS/Assignment/los.ipynb)
+- **Reference Solutions**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/2.2%20LOS/Assignment-Solution/los_answers.ipynb)
 
 ---
 
@@ -42,23 +51,34 @@ By completing this module, you will be able to:
 └── LOS_archive_data.geojson      # Multi-location time-series dataset for archival analysis
 ```
 
+GitHub Directory: [AiMTT-project/UC7-SAIL/tree/main/2.2%20LOS](https://github.com/AiMTT-project/UC7-SAIL/tree/main/2.2%20LOS)
+
 ---
 
-## Notebook Walkthrough
+## Dataset Access in Google Colab
 
-The notebook is divided into five guided sections:
+When running the notebook in Google Colab, you can obtain the datasets using any of the following methods:
 
-1. **Data Exploration**: Load the GeoJSON dataset, inspect timestamp granularity (1.5 to 2 minute intervals), and plot sensor locations over OpenStreetMap basemaps.
-2. **Density and Flow Calculation**: Complete the metric calculation formulas for area density and line flow.
-3. **Unidirectional LOS Classification**: Filter the data during the peak SAIL IN arrival period (13:30 to 14:00) and classify crowd conditions using Fruin thresholds.
-4. **Bidirectional LOS Matrix**: Construct a custom classification matrix combining density and flow ratings for bidirectional areas.
-5. **Spatial Animation**: Render time-stepped maps and combine them into an animated MP4 file using `contextily` and `imageio`.
+### Option 1: Automatic Download (Default)
+The notebook includes an automated loader that retrieves `LOS_deepdive_data.geojson` directly from GitHub into the `sample_data/` folder if it is not present locally.
+
+### Option 2: Download via wget in Colab
+Execute the following shell commands in a Colab code cell:
+
+```bash
+!mkdir -p sample_data
+!wget -q https://raw.githubusercontent.com/AiMTT-project/UC7-SAIL/main/2.2%20LOS/LOS_deepdive_data.geojson -O sample_data/LOS_deepdive_data.geojson
+```
+
+### Option 3: Manual Upload
+1. Download `LOS_deepdive_data.geojson` from the [2.2 LOS GitHub folder](https://github.com/AiMTT-project/UC7-SAIL/tree/main/2.2%20LOS).
+2. Drag and drop the file into the `sample_data` folder in the Colab file browser sidebar.
 
 ---
 
 ## Required Python Libraries
 
-To run the notebooks in this folder, install the following dependencies:
+To run the notebooks locally or in Colab, install the following dependencies:
 
 ```bash
 pip install geopandas pandas matplotlib contextily numpy imageio

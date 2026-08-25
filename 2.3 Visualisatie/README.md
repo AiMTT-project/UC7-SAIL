@@ -1,6 +1,15 @@
 # Chapter 2.3: Crowd Data Visualisation Deep Dive
 
-This module provides the practical deep-dive notebook accompanying **Video 2.3: Visualisation**, presented by **Kevin Otjes (Analyze)** as part of Chapter 2 (Preparation Phase).
+This module provides the practical deep-dive notebooks accompanying **Video 2.3: Visualisation**, presented by **Kevin Otjes (Analyze)** as part of Chapter 2 (Preparation Phase).
+
+---
+
+## Interactive Notebooks
+
+Open the notebooks directly in Google Colab:
+
+- **Starter Exercises**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/2.3%20Visualisatie/Assignment/visualisation_deepdive.ipynb)
+- **Reference Solutions**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/2.3%20Visualisatie/Assignment-Solution/visualisation_deepdive_answers.ipynb)
 
 ---
 
@@ -45,25 +54,34 @@ By completing this module, you will be able to:
 └── visualisation_deepdive_data.geojson     # Spatial crowd density and capacity tracking dataset
 ```
 
+GitHub Directory: [AiMTT-project/UC7-SAIL/tree/main/2.3%20Visualisatie](https://github.com/AiMTT-project/UC7-SAIL/tree/main/2.3%20Visualisatie)
+
 ---
 
-## Notebook Walkthrough
+## Dataset Access in Google Colab
 
-The notebook is divided into four practical assignments:
+When running the notebook in Google Colab, you can obtain the dataset using any of the following methods:
 
-1. **Capacity Over Time**: Plot the percentage utilization across all monitored event zones in a unified time-series chart.
-2. **Actionable Threshold Mapping**: Categorize area utilization into defined capacity bands (below 50%, 50% to 80%, above 80%) with intuitive alert colors.
-3. **Map-Based Situation Picture**: Produce snapshot spatial visualisations of the Crowdscan dataset for critical moments during the event.
-4. **Web GIS Styling Implementation**:
-   - Write SLD styling rules using property filters and color fills.
-   - Configure GeoStyler JSON definitions with custom classification rules.
-   - Build Mapbox vector styling expressions for web deployment.
+### Option 1: Automatic Download (Default)
+The notebook includes an automated loader that downloads `visualisation_deepdive_data.geojson` directly from GitHub into the `sample_data/` folder if it is not found locally.
+
+### Option 2: Download via wget in Colab
+Run the following shell commands in a Colab cell:
+
+```bash
+!mkdir -p sample_data
+!wget -q https://raw.githubusercontent.com/AiMTT-project/UC7-SAIL/main/2.3%20Visualisatie/visualisation_deepdive_data.geojson -O sample_data/visualisation_deepdive_data.geojson
+```
+
+### Option 3: Manual Upload
+1. Download `visualisation_deepdive_data.geojson` from the [2.3 Visualisatie GitHub folder](https://github.com/AiMTT-project/UC7-SAIL/tree/main/2.3%20Visualisatie).
+2. Upload the file into the `sample_data` folder in the Colab file browser.
 
 ---
 
 ## Required Python Libraries
 
-To run the notebooks in this folder, install the following dependencies:
+To run the notebooks locally or in Colab, install the following dependencies:
 
 ```bash
 pip install geopandas pandas matplotlib contextily numpy

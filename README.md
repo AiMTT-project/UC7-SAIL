@@ -60,46 +60,65 @@ The learning module consists of 19 video lectures organised into four sequential
 
 ---
 
-## Practical Notebooks Overview
+## Practical Notebooks and Dataset Summary
 
-Each practical unit contains both an **Assignment** notebook with exercises and an **Assignment-Solution** notebook with reference code and explanations.
+Each practical folder includes both an **Assignment** notebook with guided exercises and an **Assignment-Solution** notebook with reference implementations.
 
-| Folder | Module Topic | Key Concepts | Notebooks Included |
+| Folder | Module Topic | Primary Datasets | Open in Colab Badge |
 | :--- | :--- | :--- | :--- |
-| [2.2 LOS](./2.2%20LOS) | Level of Service (LOS) Deep Dive | Fruin unidirectional standard, bidirectional flow thresholds, area-specific LOS, animated spatial output | `los.ipynb`<br>`los_answers.ipynb` |
-| [2.3 Visualisatie](./2.3%20Visualisatie) | Crowd Data Visualisation | Capacity line charts, threshold styling, map rendering, web GIS styling (SLD, GeoStyler, Mapbox) | `visualisation_deepdive.ipynb`<br>`visualisation_deepdive_answers.ipynb` |
-| [3.2 Alerting](./3.2%20Alerting) | Alert-Based Monitoring | Noise reduction, multi-source signal fusion (pedestrians, roads, waterways), moving averages, persistence filters | `alerts_deepdive.ipynb`<br>`alerts_deepdive_answers.ipynb` |
-| [3.3 Crowd forecasting](./3.3%20Crowd%20forecasting) | Crowd Flow Forecasting (Starter & Advanced) | 3-minute sensor flow, feature engineering, LightGBM, quantile regression (P10/P50/P90), multi-step direct output, online Kalman filter, Plotly dashboards | `01_crowd_forecasting_starter_exercises.ipynb`<br>`02_crowd_forecasting_advanced_exercises.ipynb`<br>`01_crowd_forecasting_starter_solutions.ipynb`<br>`02_crowd_forecasting_advanced_solutions.ipynb` |
-| [3.4 Evaluation during the event](./3.4%20Evaluation%20during%20the%20event) | Operational Data Archiving | Streaming data ingestion, format comparison (GeoJSON/CSV vs Parquet), temporal hourly partitioning for fast query performance | `archiving_deepdive.ipynb`<br>`archiving_deepdive_answers.ipynb` |
+| [2.2 LOS](./2.2%20LOS) | Level of Service (LOS) Deep Dive | `LOS_deepdive_data.geojson`<br>`LOS_archive_data.geojson`<br>`los_alerts_deepdive_data.geojson` | [Open Starter](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/2.2%20LOS/Assignment/los.ipynb) |
+| [2.3 Visualisatie](./2.3%20Visualisatie) | Crowd Data Visualisation | `visualisation_deepdive_data.geojson` | [Open Starter](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/2.3%20Visualisatie/Assignment/visualisation_deepdive.ipynb) |
+| [3.2 Alerting](./3.2%20Alerting) | Alert-Based Monitoring | `los_alerts_deepdive_data.geojson`<br>`visualisation_deepdive_data.geojson`<br>`tomtom_alerts_deepdive_data.geojson`<br>`vaarwegen_alerts_deepdive_data.geojson` | [Open Starter](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/3.2%20Alerting/Assignment/alerts_deepdive.ipynb) |
+| [3.3 Crowd forecasting](./3.3%20Crowd%20forecasting) | Crowd Flow Forecasting (Starter & Advanced) | `SAIL2025_LVMA_data_3min_20August-25August2025_flow.csv` | [Open Starter](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/3.3%20Crowd%20forecasting/Assignment/01_crowd_forecasting_starter_exercises.ipynb) |
+| [3.4 Evaluation during the event](./3.4%20Evaluation%20during%20the%20event) | Operational Data Archiving | `LOS_archive_data.geojson` (from 2.2 LOS) | [Open Starter](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/3.4%20Evaluation%20during%20the%20event/Assignment/archiving_deepdive.ipynb) |
 
 ---
 
-## Getting Started
+## Running in Google Colab & Dataset Access
+
+When you launch any notebook using the **Open in Colab** badge, the notebook runs in a fresh cloud virtual machine. The datasets are configured for immediate accessibility through three flexible options:
+
+### 1. Automatic In-Notebook Download (Default)
+Each notebook contains built-in path resolution logic. If a dataset is not detected in your local environment, the notebook automatically downloads the file from the GitHub repository (`https://raw.githubusercontent.com/AiMTT-project/UC7-SAIL/main/`) into the `sample_data/` directory.
+
+### 2. Fast Download via Shell Command (Colab / Linux)
+You can also download any required dataset directly in a Colab code cell using `wget` or `curl`:
+
+```bash
+# Create target directory
+!mkdir -p sample_data
+
+# Example: Download Chapter 2.2 Level of Service dataset
+!wget -q https://raw.githubusercontent.com/AiMTT-project/UC7-SAIL/main/2.2%20LOS/LOS_deepdive_data.geojson -O sample_data/LOS_deepdive_data.geojson
+
+# Example: Download Chapter 3.3 Visitor Flow time series dataset
+!wget -q https://raw.githubusercontent.com/AiMTT-project/UC7-SAIL/main/3.3%20Crowd%20forecasting/SAIL2025_LVMA_data_3min_20August-25August2025_flow.csv -O sample_data/SAIL2025_LVMA_data_3min_20August-25August2025_flow.csv
+```
+
+### 3. Manual Upload
+Download the data file from the corresponding folder on GitHub and drag it into the `sample_data` folder in the Google Colab file sidebar.
+
+---
+
+## Local Environment Setup
 
 ### Prerequisites
-
-To run the notebooks locally, you need Python 3.10 or higher. You can also run the notebooks in Google Colab or JupyterLab.
+Python 3.10 or higher is recommended.
 
 ### Installation
 
-Clone the repository and install the required dependencies:
+Clone the repository:
 
 ```bash
-git clone https://github.com/your-org/aimtt-crowd-management-notebooks.git
-cd aimtt-crowd-management-notebooks
+git clone https://github.com/AiMTT-project/UC7-SAIL.git
+cd UC7-SAIL
 ```
 
-Install the core Python packages:
+Install the required Python packages:
 
 ```bash
 pip install pandas numpy matplotlib geopandas contextily lightgbm scikit-learn plotly pyarrow fastparquet imageio
 ```
-
-### Running the Notebooks
-
-1. Open your preferred environment (Jupyter Notebook, JupyterLab, VS Code, or Google Colab).
-2. Navigate to the desired module folder.
-3. Open the notebook inside the `Assignment` folder to work on the exercises, or refer to `Assignment-Solution` for the complete implementation.
 
 ---
 

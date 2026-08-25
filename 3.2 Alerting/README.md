@@ -1,6 +1,15 @@
 # Chapter 3.2: Alert-Based Monitoring Deep Dive
 
-This module provides the practical deep-dive notebook accompanying **Video 3.2: Alerting**, presented by **Kevin Otjes (Analyze)** as part of Chapter 3 (Live Event Operations).
+This module provides the practical deep-dive notebooks accompanying **Video 3.2: Alerting**, presented by **Kevin Otjes (Analyze)** as part of Chapter 3 (Live Event Operations).
+
+---
+
+## Interactive Notebooks
+
+Open the notebooks directly in Google Colab:
+
+- **Starter Exercises**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/3.2%20Alerting/Assignment/alerts_deepdive.ipynb)
+- **Reference Solutions**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/3.2%20Alerting/Assignment-Solution/alerts_deepdive_answers.ipynb)
 
 ---
 
@@ -49,25 +58,38 @@ By completing this module, you will be able to:
 └── vaarwegen_alerts_deepdive_data.geojson   # Nautical waterway sensor and traffic dataset
 ```
 
+GitHub Directory: [AiMTT-project/UC7-SAIL/tree/main/3.2%20Alerting](https://github.com/AiMTT-project/UC7-SAIL/tree/main/3.2%20Alerting)
+
 ---
 
-## Notebook Walkthrough
+## Dataset Access in Google Colab
 
-The notebook covers three progressive exercises:
+The notebook automatically checks your local folders and downloads the required files from GitHub into `sample_data/` if needed.
 
-1. **Unfiltered Data Ingestion and Overload Analysis**: Load pedestrian, road traffic, and waterway feeds simultaneously, inspecting the resulting visual chaos when all raw signals are plotted together.
-2. **Targeted State Filtering**: Isolate a specific operational moment (such as August 21 at 18:34) and filter the pedestrian dataset to display distinct visual alert markers only when conditions reach critical LoS F.
-3. **Moving Window Alert Logic**:
-   - Implement a moving average filter over a 30-minute evaluation window (18:15 to 18:45) to detect sustained high-density trends.
-   - Implement a moving minimum filter requiring all timestamps within a moving window to remain at LoS F before firing an escalation alert.
-   - Export the resulting alert sequence to an animated MP4 file.
+You can also pre-fetch all multi-modal datasets using `wget` in a Colab code cell:
+
+```bash
+!mkdir -p sample_data
+
+# Pedestrian Level of Service alerts dataset (from Chapter 2.2)
+!wget -q https://raw.githubusercontent.com/AiMTT-project/UC7-SAIL/main/2.2%20LOS/los_alerts_deepdive_data.geojson -O sample_data/los_alerts_deepdive_data.geojson
+
+# Crowdscan capacity dataset (from Chapter 2.3)
+!wget -q https://raw.githubusercontent.com/AiMTT-project/UC7-SAIL/main/2.3%20Visualisatie/visualisation_deepdive_data.geojson -O sample_data/visualisation_deepdive_data.geojson
+
+# TomTom traffic flow dataset
+!wget -q https://raw.githubusercontent.com/AiMTT-project/UC7-SAIL/main/3.2%20Alerting/tomtom_alerts_deepdive_data.geojson -O sample_data/tomtom_alerts_deepdive_data.geojson
+
+# Waterway vessel monitoring dataset
+!wget -q https://raw.githubusercontent.com/AiMTT-project/UC7-SAIL/main/3.2%20Alerting/vaarwegen_alerts_deepdive_data.geojson -O sample_data/vaarwegen_alerts_deepdive_data.geojson
+```
 
 ---
 
 ## Required Python Libraries
 
-To run the notebooks in this folder, install the following dependencies:
+To run the notebooks locally or in Colab, install the following dependencies:
 
 ```bash
-pip install geopandas pandas matplotlib contextily numpy imageio
+pip install geopandas pandas matplotlib contextily numpy imageio pyproj pillow
 ```

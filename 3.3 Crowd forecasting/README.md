@@ -4,6 +4,20 @@ This module provides the practical deep-dive notebooks accompanying **Videos 3.3
 
 ---
 
+## Interactive Notebooks
+
+Open the notebooks directly in Google Colab:
+
+### Starter Track (Foundations)
+- **Exercises**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/3.3%20Crowd%20forecasting/Assignment/01_crowd_forecasting_starter_exercises.ipynb)
+- **Reference Solutions**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/3.3%20Crowd%20forecasting/Assignment-Solution/01_crowd_forecasting_starter_solutions.ipynb)
+
+### Advanced Track (Production Pipeline & Online Filtering)
+- **Exercises**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/3.3%20Crowd%20forecasting/Assignment/02_crowd_forecasting_advanced_exercises.ipynb)
+- **Reference Solutions**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/3.3%20Crowd%20forecasting/Assignment-Solution/02_crowd_forecasting_advanced_solutions.ipynb)
+
+---
+
 ## Overview
 
 Real-time sensor monitoring shows what is happening right now, but proactive crowd management requires knowing what will happen in 30, 60, or 240 minutes. Forecasting provides crowd managers with the crucial **lead time** needed to execute preventative interventions (such as opening overflow routes, dispatching stewards, or adjusting public transit frequency) before severe overcrowding occurs.
@@ -62,24 +76,26 @@ This module contains two complete learning tracks based on high-resolution 3-min
 └── SAIL2025_LVMA_data_3min_20August-25August2025_flow.csv # High-resolution 3-minute sensor flow dataset
 ```
 
+GitHub Directory: [AiMTT-project/UC7-SAIL/tree/main/3.3%20Crowd%20forecasting](https://github.com/AiMTT-project/UC7-SAIL/tree/main/3.3%20Crowd%20forecasting)
+
 ---
 
-## Dataset Overview
+## Dataset Access in Google Colab
 
-The dataset `SAIL2025_LVMA_data_3min_20August-25August2025_flow.csv` contains continuous visitor flow counts collected between August 20 and August 25, 2025.
+The notebooks include automated loaders that retrieve `SAIL2025_LVMA_data_3min_20August-25August2025_flow.csv` directly from GitHub into `sample_data/` if not found locally.
 
-Key columns:
-- `timestamp`: Date and time at 3-minute intervals.
-- `sensor_id`: Unique identifier for each pedestrian tracking gate.
-- `location_name`: Human-readable location description (for example, Piet Heinkade, Stationsplein, Java-eiland).
-- `flow`: Total number of pedestrians passing through the gate during the 3-minute window.
-- `temperature`, `precipitation`, `wind_speed`: Local meteorological observations.
+To download the dataset manually in a Colab code cell:
+
+```bash
+!mkdir -p sample_data
+!wget -q https://raw.githubusercontent.com/AiMTT-project/UC7-SAIL/main/3.3%20Crowd%20forecasting/SAIL2025_LVMA_data_3min_20August-25August2025_flow.csv -O sample_data/SAIL2025_LVMA_data_3min_20August-25August2025_flow.csv
+```
 
 ---
 
 ## Required Python Libraries
 
-To run the notebooks in this folder, install the following dependencies:
+To run the notebooks locally or in Colab, install the following dependencies:
 
 ```bash
 pip install pandas numpy matplotlib lightgbm scikit-learn plotly
