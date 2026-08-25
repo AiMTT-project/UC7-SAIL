@@ -55,7 +55,8 @@ By completing this module, you will be able to:
 │
 ├── alerts_deepdive_data.geojson            # Pedestrian Level of Service dataset
 ├── tomtom_alerts_deepdive_data.geojson      # Road traffic speed and congestion alert dataset
-└── vaarwegen_alerts_deepdive_data.geojson   # Nautical waterway sensor and traffic dataset
+├── vaarwegen_alerts_deepdive_data.geojson   # Nautical waterway sensor and traffic dataset
+└── warning.png                             # Visual alert icon overlay
 ```
 
 GitHub Directory: [AiMTT-project/UC7-SAIL/tree/main/3.2%20Alerting](https://github.com/AiMTT-project/UC7-SAIL/tree/main/3.2%20Alerting)
@@ -82,6 +83,9 @@ You can also pre-fetch all multi-modal datasets using `wget` in a Colab code cel
 
 # Waterway vessel monitoring dataset (Git LFS media link)
 !wget -q https://media.githubusercontent.com/media/AiMTT-project/UC7-SAIL/main/3.2%20Alerting/vaarwegen_alerts_deepdive_data.geojson -O sample_data/vaarwegen_alerts_deepdive_data.geojson
+
+# Alert icon overlay
+!wget -q https://raw.githubusercontent.com/AiMTT-project/UC7-SAIL/main/3.2%20Alerting/warning.png -O sample_data/warning.png
 ```
 
 ---
