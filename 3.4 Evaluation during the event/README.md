@@ -8,8 +8,8 @@ This module provides the practical deep-dive notebooks accompanying **Video 3.4:
 
 Open the notebooks directly in Google Colab:
 
-- **Starter Exercises**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/3.4%20Evaluation%20during%20the%20event/Assignment/archiving_deepdive.ipynb)
-- **Reference Solutions**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/3.4%20Evaluation%20during%20the%20event/Assignment-Solution/archiving_deepdive_answers.ipynb)
+- **Starter Exercises**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/use-case-1/blob/main/3.4%20Evaluation%20during%20the%20event/Assignment/archiving_deepdive.ipynb)
+- **Reference Solutions**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/use-case-1/blob/main/3.4%20Evaluation%20during%20the%20event/Assignment-Solution/archiving_deepdive_answers.ipynb)
 
 ---
 
@@ -53,13 +53,13 @@ By completing this module, you will be able to:
     └── archiving_deepdive_answers.ipynb    # Complete reference solution notebook
 ```
 
-GitHub Directory: [AiMTT-project/UC7-SAIL/tree/main/3.4%20Evaluation%20during%20the%20event](https://github.com/AiMTT-project/UC7-SAIL/tree/main/3.4%20Evaluation%20during%20the%20event)
+GitHub Directory: [AiMTT-project/use-case-1/tree/main/3.4%20Evaluation%20during%20the%20event](https://github.com/AiMTT-project/use-case-1/tree/main/3.4%20Evaluation%20during%20the%20event)
 
 ---
 
 ## Dataset Reference and Colab Access
 
-This module uses `LOS_archive_data.geojson`, which is stored in the [`2.2 LOS`](https://github.com/AiMTT-project/UC7-SAIL/tree/main/2.2%20LOS) folder of this repository.
+This module uses `LOS_archive_data.geojson`, which is stored in the [`2.2 LOS`](https://github.com/AiMTT-project/use-case-1/tree/main/2.2%20LOS) folder of this repository.
 
 The dataset contains pedestrian sensor counts, line crossings, area densities, and spatial polygon geometries across key Amsterdam locations during SAIL 2025.
 
@@ -71,7 +71,7 @@ You can also download the dataset manually using `wget`:
 
 ```bash
 !mkdir -p sample_data
-!wget -q https://raw.githubusercontent.com/AiMTT-project/UC7-SAIL/main/2.2%20LOS/LOS_archive_data.geojson -O sample_data/LOS_archive_data.geojson
+!wget -q https://raw.githubusercontent.com/AiMTT-project/use-case-1/main/2.2%20LOS/LOS_archive_data.geojson -O sample_data/LOS_archive_data.geojson
 ```
 
 ---

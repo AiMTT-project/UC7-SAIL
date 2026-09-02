@@ -8,8 +8,8 @@ This module provides the practical deep-dive notebooks accompanying **Video 2.3:
 
 Open the notebooks directly in Google Colab:
 
-- **Starter Exercises**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/2.3%20Visualisatie/Assignment/visualisation_deepdive.ipynb)
-- **Reference Solutions**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/2.3%20Visualisatie/Assignment-Solution/visualisation_deepdive_answers.ipynb)
+- **Starter Exercises**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/use-case-1/blob/main/2.3%20Visualisatie/Assignment/visualisation_deepdive.ipynb)
+- **Reference Solutions**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/use-case-1/blob/main/2.3%20Visualisatie/Assignment-Solution/visualisation_deepdive_answers.ipynb)
 
 ---
 
@@ -54,7 +54,7 @@ By completing this module, you will be able to:
 └── visualisation_deepdive_data.geojson     # Spatial crowd density and capacity tracking dataset
 ```
 
-GitHub Directory: [AiMTT-project/UC7-SAIL/tree/main/2.3%20Visualisatie](https://github.com/AiMTT-project/UC7-SAIL/tree/main/2.3%20Visualisatie)
+GitHub Directory: [AiMTT-project/use-case-1/tree/main/2.3%20Visualisatie](https://github.com/AiMTT-project/use-case-1/tree/main/2.3%20Visualisatie)
 
 ---
 
@@ -70,11 +70,11 @@ Run the following shell commands in a Colab cell:
 
 ```bash
 !mkdir -p sample_data
-!wget -q https://raw.githubusercontent.com/AiMTT-project/UC7-SAIL/main/2.3%20Visualisatie/visualisation_deepdive_data.geojson -O sample_data/visualisation_deepdive_data.geojson
+!wget -q https://raw.githubusercontent.com/AiMTT-project/use-case-1/main/2.3%20Visualisatie/visualisation_deepdive_data.geojson -O sample_data/visualisation_deepdive_data.geojson
 ```
 
 ### Option 3: Manual Upload
-1. Download `visualisation_deepdive_data.geojson` from the [2.3 Visualisatie GitHub folder](https://github.com/AiMTT-project/UC7-SAIL/tree/main/2.3%20Visualisatie).
+1. Download `visualisation_deepdive_data.geojson` from the [2.3 Visualisatie GitHub folder](https://github.com/AiMTT-project/use-case-1/tree/main/2.3%20Visualisatie).
 2. Upload the file into the `sample_data` folder in the Colab file browser.
 
 ---

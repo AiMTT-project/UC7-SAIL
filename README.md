@@ -1,6 +1,6 @@
 # Learning Module: Crowd Management During Events
 
-Discover how data science and artificial intelligence can improve crowd management during large-scale public events. Based on the AIM-TT (AI for Mobility and Transport Transition) crowd management use case developed around the SAIL Amsterdam 2025 event, this repository provides hands-on Python notebooks and reference materials designed to accompany the video learning module.
+Discover how data science and artificial intelligence can improve crowd management during large-scale public events. Based on the AiMTT (AI for Mobility and Transport Transition) crowd management use case developed around the SAIL Amsterdam 2025 event, this repository provides hands-on Python notebooks and reference materials designed to accompany the video learning module.
 
 The learning series walks through the entire event lifecycle step by step, covering data sharing architectures, crowd simulation, Level of Service assessments, real-time monitoring, threshold alerting, probabilistic crowd forecasting, and operational data archiving.
 
@@ -66,11 +66,11 @@ Each practical folder includes both an **Assignment** notebook with guided exerc
 
 | Folder | Module Topic | Primary Datasets | Open in Colab Badge |
 | :--- | :--- | :--- | :--- |
-| [2.2 LOS](./2.2%20LOS) | Level of Service (LOS) Deep Dive | `LOS_deepdive_data.geojson`<br>`LOS_archive_data.geojson`<br>`los_alerts_deepdive_data.geojson` | [Open Starter](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/2.2%20LOS/Assignment/los.ipynb) |
-| [2.3 Visualisatie](./2.3%20Visualisatie) | Crowd Data Visualisation | `visualisation_deepdive_data.geojson` | [Open Starter](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/2.3%20Visualisatie/Assignment/visualisation_deepdive.ipynb) |
-| [3.2 Alerting](./3.2%20Alerting) | Alert-Based Monitoring | `los_alerts_deepdive_data.geojson`<br>`visualisation_deepdive_data.geojson`<br>`tomtom_alerts_deepdive_data.geojson`<br>`vaarwegen_alerts_deepdive_data.geojson` | [Open Starter](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/3.2%20Alerting/Assignment/alerts_deepdive.ipynb) |
-| [3.3 Crowd forecasting](./3.3%20Crowd%20forecasting) | Crowd Flow Forecasting (Starter & Advanced) | `SAIL2025_LVMA_data_3min_20August-25August2025_flow.csv` | [Open Starter](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/3.3%20Crowd%20forecasting/Assignment/01_crowd_forecasting_starter_exercises.ipynb) |
-| [3.4 Evaluation during the event](./3.4%20Evaluation%20during%20the%20event) | Operational Data Archiving | `LOS_archive_data.geojson` (from 2.2 LOS) | [Open Starter](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/3.4%20Evaluation%20during%20the%20event/Assignment/archiving_deepdive.ipynb) |
+| [2.2 LOS](./2.2%20LOS) | Level of Service (LOS) Deep Dive | `LOS_deepdive_data.geojson`<br>`LOS_archive_data.geojson`<br>`los_alerts_deepdive_data.geojson` | [Open Starter](https://colab.research.google.com/github/AiMTT-project/use-case-1/blob/main/2.2%20LOS/Assignment/los.ipynb) |
+| [2.3 Visualisatie](./2.3%20Visualisatie) | Crowd Data Visualisation | `visualisation_deepdive_data.geojson` | [Open Starter](https://colab.research.google.com/github/AiMTT-project/use-case-1/blob/main/2.3%20Visualisatie/Assignment/visualisation_deepdive.ipynb) |
+| [3.2 Alerting](./3.2%20Alerting) | Alert-Based Monitoring | `los_alerts_deepdive_data.geojson`<br>`visualisation_deepdive_data.geojson`<br>`tomtom_alerts_deepdive_data.geojson`<br>`vaarwegen_alerts_deepdive_data.geojson` | [Open Starter](https://colab.research.google.com/github/AiMTT-project/use-case-1/blob/main/3.2%20Alerting/Assignment/alerts_deepdive.ipynb) |
+| [3.3 Crowd forecasting](./3.3%20Crowd%20forecasting) | Crowd Flow Forecasting (Starter & Advanced) | `SAIL2025_LVMA_data_3min_20August-25August2025_flow.csv` | [Open Starter](https://colab.research.google.com/github/AiMTT-project/use-case-1/blob/main/3.3%20Crowd%20forecasting/Assignment/01_crowd_forecasting_starter_exercises.ipynb) |
+| [3.4 Evaluation during the event](./3.4%20Evaluation%20during%20the%20event) | Operational Data Archiving | `LOS_archive_data.geojson` (from 2.2 LOS) | [Open Starter](https://colab.research.google.com/github/AiMTT-project/use-case-1/blob/main/3.4%20Evaluation%20during%20the%20event/Assignment/archiving_deepdive.ipynb) |
 
 ---
 
@@ -79,7 +79,7 @@ Each practical folder includes both an **Assignment** notebook with guided exerc
 When you launch any notebook using the **Open in Colab** badge, the notebook runs in a fresh cloud virtual machine. The datasets are configured for immediate accessibility through three flexible options:
 
 ### 1. Automatic In-Notebook Download (Default)
-Each notebook contains built-in path resolution logic. If a dataset is not detected in your local environment, the notebook automatically downloads the file from the GitHub repository (`https://raw.githubusercontent.com/AiMTT-project/UC7-SAIL/main/`) into the `sample_data/` directory.
+Each notebook contains built-in path resolution logic. If a dataset is not detected in your local environment, the notebook automatically downloads the file from the GitHub repository (`https://raw.githubusercontent.com/AiMTT-project/use-case-1/main/`) into the `sample_data/` directory.
 
 ### 2. Fast Download via Shell Command (Colab / Linux)
 You can also download any required dataset directly in a Colab code cell using `wget` or `curl`:
@@ -89,10 +89,10 @@ You can also download any required dataset directly in a Colab code cell using `
 !mkdir -p sample_data
 
 # Example: Download Chapter 2.2 Level of Service dataset
-!wget -q https://raw.githubusercontent.com/AiMTT-project/UC7-SAIL/main/2.2%20LOS/LOS_deepdive_data.geojson -O sample_data/LOS_deepdive_data.geojson
+!wget -q https://raw.githubusercontent.com/AiMTT-project/use-case-1/main/2.2%20LOS/LOS_deepdive_data.geojson -O sample_data/LOS_deepdive_data.geojson
 
 # Example: Download Chapter 3.3 Visitor Flow time series dataset
-!wget -q https://raw.githubusercontent.com/AiMTT-project/UC7-SAIL/main/3.3%20Crowd%20forecasting/SAIL2025_LVMA_data_3min_20August-25August2025_flow.csv -O sample_data/SAIL2025_LVMA_data_3min_20August-25August2025_flow.csv
+!wget -q https://raw.githubusercontent.com/AiMTT-project/use-case-1/main/3.3%20Crowd%20forecasting/SAIL2025_LVMA_data_3min_20August-25August2025_flow.csv -O sample_data/SAIL2025_LVMA_data_3min_20August-25August2025_flow.csv
 ```
 
 ### 3. Manual Upload
@@ -110,8 +110,8 @@ Python 3.10 or higher is recommended.
 Clone the repository:
 
 ```bash
-git clone https://github.com/AiMTT-project/UC7-SAIL.git
-cd UC7-SAIL
+git clone https://github.com/AiMTT-project/use-case-1.git
+cd use-case-1
 ```
 
 Install the required Python packages:
@@ -124,7 +124,7 @@ pip install pandas numpy matplotlib geopandas contextily lightgbm scikit-learn p
 
 ## Contributing and Partners
 
-This learning module was created as part of the AIM-TT project by:
+This learning module was created as part of the AiMTT project by:
 - **TU Delft** (Delft University of Technology)
 - **Analyze**
 - **uCrowds**

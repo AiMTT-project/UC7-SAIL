@@ -9,12 +9,12 @@ This module provides the practical deep-dive notebooks accompanying **Videos 3.3
 Open the notebooks directly in Google Colab:
 
 ### Starter Track (Foundations)
-- **Exercises**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/3.3%20Crowd%20forecasting/Assignment/01_crowd_forecasting_starter_exercises.ipynb)
-- **Reference Solutions**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/3.3%20Crowd%20forecasting/Assignment-Solution/01_crowd_forecasting_starter_solutions.ipynb)
+- **Exercises**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/use-case-1/blob/main/3.3%20Crowd%20forecasting/Assignment/01_crowd_forecasting_starter_exercises.ipynb)
+- **Reference Solutions**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/use-case-1/blob/main/3.3%20Crowd%20forecasting/Assignment-Solution/01_crowd_forecasting_starter_solutions.ipynb)
 
 ### Advanced Track (Production Pipeline & Online Filtering)
-- **Exercises**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/3.3%20Crowd%20forecasting/Assignment/02_crowd_forecasting_advanced_exercises.ipynb)
-- **Reference Solutions**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/3.3%20Crowd%20forecasting/Assignment-Solution/02_crowd_forecasting_advanced_solutions.ipynb)
+- **Exercises**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/use-case-1/blob/main/3.3%20Crowd%20forecasting/Assignment/02_crowd_forecasting_advanced_exercises.ipynb)
+- **Reference Solutions**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/use-case-1/blob/main/3.3%20Crowd%20forecasting/Assignment-Solution/02_crowd_forecasting_advanced_solutions.ipynb)
 
 ---
 
@@ -76,7 +76,7 @@ This module contains two complete learning tracks based on high-resolution 3-min
 └── SAIL2025_LVMA_data_3min_20August-25August2025_flow.csv # High-resolution 3-minute sensor flow dataset
 ```
 
-GitHub Directory: [AiMTT-project/UC7-SAIL/tree/main/3.3%20Crowd%20forecasting](https://github.com/AiMTT-project/UC7-SAIL/tree/main/3.3%20Crowd%20forecasting)
+GitHub Directory: [AiMTT-project/use-case-1/tree/main/3.3%20Crowd%20forecasting](https://github.com/AiMTT-project/use-case-1/tree/main/3.3%20Crowd%20forecasting)
 
 ---
 
@@ -88,7 +88,7 @@ To download the dataset manually in a Colab code cell:
 
 ```bash
 !mkdir -p sample_data
-!wget -q https://raw.githubusercontent.com/AiMTT-project/UC7-SAIL/main/3.3%20Crowd%20forecasting/SAIL2025_LVMA_data_3min_20August-25August2025_flow.csv -O sample_data/SAIL2025_LVMA_data_3min_20August-25August2025_flow.csv
+!wget -q https://raw.githubusercontent.com/AiMTT-project/use-case-1/main/3.3%20Crowd%20forecasting/SAIL2025_LVMA_data_3min_20August-25August2025_flow.csv -O sample_data/SAIL2025_LVMA_data_3min_20August-25August2025_flow.csv
 ```
 
 ---

@@ -8,8 +8,8 @@ This module provides the practical deep-dive notebooks accompanying **Video 2.2:
 
 Open the notebooks directly in Google Colab:
 
-- **Starter Exercises**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/2.2%20LOS/Assignment/los.ipynb)
-- **Reference Solutions**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/2.2%20LOS/Assignment-Solution/los_answers.ipynb)
+- **Starter Exercises**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/use-case-1/blob/main/2.2%20LOS/Assignment/los.ipynb)
+- **Reference Solutions**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/use-case-1/blob/main/2.2%20LOS/Assignment-Solution/los_answers.ipynb)
 
 ---
 
@@ -51,7 +51,7 @@ By completing this module, you will be able to:
 └── LOS_archive_data.geojson      # Multi-location time-series dataset for archival analysis
 ```
 
-GitHub Directory: [AiMTT-project/UC7-SAIL/tree/main/2.2%20LOS](https://github.com/AiMTT-project/UC7-SAIL/tree/main/2.2%20LOS)
+GitHub Directory: [AiMTT-project/use-case-1/tree/main/2.2%20LOS](https://github.com/AiMTT-project/use-case-1/tree/main/2.2%20LOS)
 
 ---
 
@@ -67,11 +67,11 @@ Execute the following shell commands in a Colab code cell:
 
 ```bash
 !mkdir -p sample_data
-!wget -q https://raw.githubusercontent.com/AiMTT-project/UC7-SAIL/main/2.2%20LOS/LOS_deepdive_data.geojson -O sample_data/LOS_deepdive_data.geojson
+!wget -q https://raw.githubusercontent.com/AiMTT-project/use-case-1/main/2.2%20LOS/LOS_deepdive_data.geojson -O sample_data/LOS_deepdive_data.geojson
 ```
 
 ### Option 3: Manual Upload
-1. Download `LOS_deepdive_data.geojson` from the [2.2 LOS GitHub folder](https://github.com/AiMTT-project/UC7-SAIL/tree/main/2.2%20LOS).
+1. Download `LOS_deepdive_data.geojson` from the [2.2 LOS GitHub folder](https://github.com/AiMTT-project/use-case-1/tree/main/2.2%20LOS).
 2. Drag and drop the file into the `sample_data` folder in the Colab file browser sidebar.
 
 ---

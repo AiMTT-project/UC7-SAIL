@@ -8,8 +8,8 @@ This module provides the practical deep-dive notebooks accompanying **Video 3.2:
 
 Open the notebooks directly in Google Colab:
 
-- **Starter Exercises**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/3.2%20Alerting/Assignment/alerts_deepdive.ipynb)
-- **Reference Solutions**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/UC7-SAIL/blob/main/3.2%20Alerting/Assignment-Solution/alerts_deepdive_answers.ipynb)
+- **Starter Exercises**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/use-case-1/blob/main/3.2%20Alerting/Assignment/alerts_deepdive.ipynb)
+- **Reference Solutions**: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AiMTT-project/use-case-1/blob/main/3.2%20Alerting/Assignment-Solution/alerts_deepdive_answers.ipynb)
 
 ---
 
@@ -59,7 +59,7 @@ By completing this module, you will be able to:
 └── warning.png                             # Visual alert icon overlay
 ```
 
-GitHub Directory: [AiMTT-project/UC7-SAIL/tree/main/3.2%20Alerting](https://github.com/AiMTT-project/UC7-SAIL/tree/main/3.2%20Alerting)
+GitHub Directory: [AiMTT-project/use-case-1/tree/main/3.2%20Alerting](https://github.com/AiMTT-project/use-case-1/tree/main/3.2%20Alerting)
 
 ---
 
@@ -73,19 +73,19 @@ You can also pre-fetch all multi-modal datasets using `wget` in a Colab code cel
 !mkdir -p sample_data
 
 # Pedestrian Level of Service alerts dataset (from Chapter 2.2)
-!wget -q https://raw.githubusercontent.com/AiMTT-project/UC7-SAIL/main/2.2%20LOS/los_alerts_deepdive_data.geojson -O sample_data/los_alerts_deepdive_data.geojson
+!wget -q https://raw.githubusercontent.com/AiMTT-project/use-case-1/main/2.2%20LOS/los_alerts_deepdive_data.geojson -O sample_data/los_alerts_deepdive_data.geojson
 
 # Crowdscan capacity dataset (from Chapter 2.3)
-!wget -q https://raw.githubusercontent.com/AiMTT-project/UC7-SAIL/main/2.3%20Visualisatie/visualisation_deepdive_data.geojson -O sample_data/visualisation_deepdive_data.geojson
+!wget -q https://raw.githubusercontent.com/AiMTT-project/use-case-1/main/2.3%20Visualisatie/visualisation_deepdive_data.geojson -O sample_data/visualisation_deepdive_data.geojson
 
 # TomTom traffic flow dataset (Git LFS media link)
-!wget -q https://media.githubusercontent.com/media/AiMTT-project/UC7-SAIL/main/3.2%20Alerting/tomtom_alerts_deepdive_data.geojson -O sample_data/tomtom_alerts_deepdive_data.geojson
+!wget -q https://media.githubusercontent.com/media/AiMTT-project/use-case-1/main/3.2%20Alerting/tomtom_alerts_deepdive_data.geojson -O sample_data/tomtom_alerts_deepdive_data.geojson
 
 # Waterway vessel monitoring dataset (Git LFS media link)
-!wget -q https://media.githubusercontent.com/media/AiMTT-project/UC7-SAIL/main/3.2%20Alerting/vaarwegen_alerts_deepdive_data.geojson -O sample_data/vaarwegen_alerts_deepdive_data.geojson
+!wget -q https://media.githubusercontent.com/media/AiMTT-project/use-case-1/main/3.2%20Alerting/vaarwegen_alerts_deepdive_data.geojson -O sample_data/vaarwegen_alerts_deepdive_data.geojson
 
 # Alert icon overlay
-!wget -q https://raw.githubusercontent.com/AiMTT-project/UC7-SAIL/main/3.2%20Alerting/warning.png -O sample_data/warning.png
+!wget -q https://raw.githubusercontent.com/AiMTT-project/use-case-1/main/3.2%20Alerting/warning.png -O sample_data/warning.png
 ```
 
 ---
